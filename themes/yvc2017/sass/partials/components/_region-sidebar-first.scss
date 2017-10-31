@@ -1,0 +1,89 @@
+// Sidebars in general 
+.region-sidebar-second .block__content, .region-sidebar-first .fieldset__content {
+	background-color: $color-grey-light;
+}
+.region-sidebar-second .block__content, .region-sidebar-first .fieldset__content {
+	padding: 0.5em 0 1em 20px;
+	background-color: $color-grey-light;
+}
+
+// Sidebar first 
+// Keyword search filter on /resources page 
+
+.block-search-form-mini.keyword-advanced-search {
+	background-size: contain;
+	background-position: top 1.25em right 0;
+	label {
+		@include visually-hidden-off;
+		font-family: $header-font-family;
+	}
+	.form-item + input[type='submit'] { // This hack should be fixed when double submit buttons have diff IDs/in right markup containers
+		margin: 0 0 1em 20px;
+	}
+	// .button {
+	// 	background-color: $color-orange;
+	// 	color: #fff;
+	// 	margin-left: 0 !important;
+	// 	&:hover, &:focus, &:active {
+	// 		background-color: $color-grey-dark;
+	// 	}
+	// }
+}
+
+.region-sidebar-first fieldset, .region-sidebar-first .form-item--id-search-api-fulltext {
+		margin-bottom: 0;	
+}
+
+.region-sidebar-first {
+	.form-actions {
+		background-color: $color-grey-light;
+		padding: 0 20px 1em 20px;
+		.button {
+			background-color: #fff;
+			color: $color-grey-dark;
+			&:hover, &:active, &:focus {
+				color: #fff;
+				background-color: $color-grey-dark;
+			}
+		}
+	}
+} 
+
+%sidebar-block-title {
+	width: 100%;
+	@include fontSize(20px);
+	padding: 0.25em 20px;
+	margin-bottom: 0;
+	color: #fff;
+	background-color: $color-grey-dark;
+}
+
+.region-sidebar-first {
+	.fieldset__legend, .form-item--id-search-api-fulltext label {
+		@extend %sidebar-block-title;
+		font-weight: 700;
+	}
+	.fieldset__legend {
+		background-color: $color-grey-light2;
+	}
+	.fieldset {
+		top: 0;
+	}
+	.form-item--id-search-api-fulltext label {
+		display: block;
+		background: none;
+	}
+	.form-item--id-search-api-fulltext input {
+		margin: 0.5em 20px 1em 20px;
+	}
+}
+
+// Sidebar First 
+// Custom source order on desktop
+@include breakpoint($tabletish) {
+	.l-sidebar-first {
+		order: -1;
+		padding-right: 4 * $gutter-width;
+	}
+}
+

@@ -1,0 +1,388 @@
+// @file
+// Styles for a view.
+
+.view__filters {
+  margin-bottom: rem($vertical-spacing);
+}
+
+.view__header {
+	margin-bottom: 1.5em;
+}
+.col-content {
+	display: inline-block;
+	width: 100%;
+	min-height: 21.875em; // Temporary - use JS 
+	margin-bottom: 20px;
+	margin-bottom: 1.25rem;
+	text-align: left;
+	text-decoration: none;
+}
+
+.more-link, .more-link > a {
+	text-transform: uppercase;
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+
+.tile-list-simple {
+	.col-content {
+		text-align: left;
+		padding: 16px;
+		padding: 1rem;
+		min-height: 11.875em;
+		background-color: $color-magenta;
+		// @include svg-background(diagonal);
+		// background-position: bottom -20px left;
+		// background-repeat: no-repeat;
+		// background-size: cover;
+		color: #fff;
+		&:hover, &:active, &:focus {
+			background-color: $color-blue;
+		}
+		h3 {
+			@include fontSize(20px);
+			font-family: $base-font-family;
+			font-weight: normal;
+		}
+	}
+
+}
+
+.tile-list {
+	.col-content {
+		background-color: $color-grey-light;
+		@include svg-background(x-bg);
+		background-position: bottom;
+		background-size: cover;
+		border-top: 8px solid $color-grey-light;
+		color: $color-grey-dark;
+		&.content-id-2 { // Each Mind Matters tile gets special treatment 
+			background-color: $color-green;
+			border-top-color: $color-green;
+			color: #000;
+		}
+		&:hover, &:active, &:focus {
+			border-top-color: $color-orange;
+			box-shadow: 0 0 12px $color-grey-dark;
+		}
+		h3, p {
+		padding: 8px 16px;
+		padding: 0.5rem 1rem;
+		}
+		h3 {
+			text-align: left !important;
+			padding-bottom: 0;
+			margin-bottom: 0;
+			color: #000;
+		}
+		img {
+			width: 100%;
+		}
+		// .more-link {
+		// 	text-transform: uppercase;
+		// 	font-weight: 700;
+		// 	text-decoration: underline;
+		// }
+	}
+}
+
+
+// Fake tab filter nav for Collections page
+%active-tab {
+	color: #fff;
+	background-color: $color-magenta;
+	text-transform: uppercase;	
+}
+.tabs-nav-wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	.view__row {
+		width: 50%;
+	}
+	.view__row a {
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+		padding: 0.5em 1em;
+		border: 1px solid $color-grey-dark;	
+		border-top: none;
+		color: $color-grey-dark;
+		text-decoration: none;
+		&:hover, &:focus, &:active {
+			color: #fff !important;
+			background-color: $color-magenta !important;	
+		}
+	}
+	.view__row:first-child a {
+		border-top: 1px solid $color-grey-dark;
+		.path-collections & {
+			@extend %active-tab;
+		}
+	}
+	@include breakpoint($tabletish) {
+		flex-direction: row;
+		.view__row {
+			width: inherit;
+		}
+		.view__row a {
+			border-top: 1px solid $color-grey-dark;
+			border-left: none;
+			white-space: nowrap;
+		}
+		.view__row:first-child a {
+			border-left: 1px solid $color-grey-dark;
+		}
+	}
+	@include breakpoint($max-page-width) {
+		.view__row {
+			flex: 25% 0 0;
+		}
+	}
+}
+
+.tabs-nav-wrapper {
+	// Fake the nav state for each of the category pages 
+	// Reset the first one that doesn't have a content ID on the body class
+	.path-collections.content-id-12 &, .path-collections.content-id-13 &, .path-collections.content-id-14 & {
+		.view__row:first-child a {
+			color: $color-grey-dark;
+			background-color: $color-grey-light;
+			text-transform: none;
+			}
+	}
+	// Make each term item look active when it matches its page
+	.content-id-12 & {
+		.view__row.term-12 a {
+			@extend %active-tab;
+		}
+	}
+	.content-id-13 & {
+		.view__row.term-13 a {
+			@extend %active-tab;
+		}
+	}
+	.content-id-14 & {
+		.view__row.term-14 a {
+			@extend %active-tab;
+		}
+	}
+}
+
+// Simple list of content, no images, like on collections page 
+.list-simple {
+	h2, h3 {
+		@include fontSize(16px);
+		font-family: $base-font-family;
+		margin-bottom: 0.25em;
+		a {
+			position: relative;
+			color: $color-grey-dark;
+			text-decoration: none;
+			padding-right: 1em;
+			&:after {
+				content: ">";
+				display: inline-block;
+			  	position: absolute;
+			  	right: 0;	
+			}
+			// &:before {
+			// 	content: " ";
+			// 	display: block;
+			//   	position: absolute;
+			//   	width: 100%;
+			//   	height: 1px;
+			//   	bottom: 0;
+			//   	left: 0;
+			//   	background-color: $color-grey-medium;
+			// }
+			border-bottom: 1px solid $color-grey-medium;
+			&:hover, &:focus, &:active {
+				// &:before {
+				// 	background-color: $color-green;
+				// }
+				border-bottom-color: $color-green;
+			}
+		}
+	}
+	p {
+		margin: 0;
+	}
+	.view__row {
+		margin-bottom: 2em;
+		&:last-child {
+			margin-bottom: 0.5em;
+		}
+	}
+	.view__header {
+		@include fontSize(12px);
+		margin: 2em 0;
+		text-transform: uppercase;
+	}
+	.pager__item--current {
+		background-color: $color-orange; 
+		color: #fff;
+	}
+	.pager__link {
+		background: none;
+	}
+}
+.img-list {
+	// .img-list-teaser, .views-field-field-feature-image {
+	// 	float: left;
+	// }
+	.views-field-field-feature-image {
+		margin-bottom: 1em;
+	}
+	@include breakpoint($max-page-width) {
+		.views-field-field-feature-image {
+			margin-bottom: 0;
+		}
+		.img-list-teaser, .views-field-field-feature-image {
+			float: left;
+		}
+		.views-field-field-feature-image {
+			max-width: 25%;
+		}
+		.img-list-teaser {
+			max-width: 75%;
+			padding-left: 1.5em;	
+		}
+	}
+}
+
+.region-content {
+	.img-list, .list-simple {
+		.view__row {
+			width: 100%;
+			float: left;
+			clear: both;
+		}
+	}
+}
+
+#block-views-block-resources-block-2, .block-links-downloads {
+	.block__content {
+		padding-left: 0;
+		padding-right: 0;
+		ul, li {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+		} 
+	}
+	.file-group h3, .link-item, .file-licensing-agreement, .views-field-field-external-urls {
+		padding-left: 2 * $gutter-width;
+		padding-right: 2 * $gutter-width;
+	}
+	.link-item, .field-content {
+		padding-top: 1em;
+		padding-bottom: 1em;
+		border-top: 2px solid #fff;
+		&:first-of-type {
+			border-top: none;
+		}
+	}
+	.link-item > a, .views-field-field-external-urls a {
+		display: block;
+		padding-right: 3em;
+		@include svg-background(arrow-circle-down-grey-light);
+		background-repeat: no-repeat;
+		background-size: 2.5em 2.5em;
+		background-position: right top;
+		text-decoration: none;
+		color: $color-grey-dark;
+		&:hover, &:focus, &:active {
+			text-decoration: underline;
+			color: $color-orange;
+			@include svg-background(arrow-circle-down-orange);
+		}	
+	}
+	.file-description {
+		font-weight: 700;
+	}
+	.file-licensing-agreement {
+		border-top: 2px solid #fff;
+		margin-top: 1em;
+		padding-top: 0.5em;
+		font-style: italic;
+		@include fontSize(15px);
+	}
+}
+
+.block-links-downloads .views-field-field-external-urls {
+	a {
+		text-transform: uppercase;
+		font-weight: 700;
+		line-height: 1;
+		padding: 1em 3em 1em 0;
+		background-position: right center;
+		@include svg-background(arrow-circle-right-grey-light);
+		&:hover, &:focus, &:active {
+			@include svg-background(arrow-circle-right-orange);
+		}	
+	}
+}
+
+// Toolkits
+#block-views-block-resources-block-6, .list-toolkit {
+	background-color: $color-grey-light;
+	margin-bottom: 2em;
+	// @include breakpoint($max-page-width) {
+	// 	max-width: 75%;
+	// }
+	.block__title {
+		background-color: $color-grey-dark;
+		color: #fff;
+		@include fontSize(20px);
+		padding: 0.25em 2em;
+	}
+	.view__row, .view__footer {
+		padding: 1em 2em;
+		border-top: 2px solid #fff;
+		&:first-child {
+			border-top: none;
+		}
+	}
+	.view__footer {
+		font-style: italic;
+	}
+	.block__content {
+		ul, li {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+		}
+	}
+	h3 {
+		@include fontSize(18px);
+	}
+	h3 > a, .block__content li a {
+		text-decoration: none;
+		color: $color-grey-dark;
+		&:hover, &:focus, &:active {
+			color: $color-orange;
+			text-decoration: underline;
+		}
+	}
+	.block__content li a {
+		display: block;
+		padding: 0.5em 2.25em 0.5em 0;
+		margin-bottom: 1em;
+		@include svg-background(arrow-circle-down-grey-light);
+		background-repeat: no-repeat;
+		background-size: 2em 2em;
+		background-position: right top 50%;
+		text-decoration: none;
+		color: $color-grey-dark;
+		&:hover, &:focus, &:active {
+			@include svg-background(arrow-circle-down-orange);
+		}	
+		@include breakpoint($tabletish) {
+			max-width: 33%;
+		}
+	}
+}

@@ -1,0 +1,62 @@
+.region-preface {
+	padding: 2em 0;
+	margin-bottom: 2em;
+	background-color: $color-grey-light;
+	.path-collections & {
+		border-bottom: 8px solid $color-magenta;
+		font-weight: bold;
+	}
+	.page--node-type-initiative & {
+		border-bottom: 8px solid $color-teal-light;	
+		@include breakpoint ($tabletish) {		
+			padding-left: 119px;
+			padding-left: 7.4375rem; 
+			padding-right: 119px;
+			padding-right: 7.4375rem;
+		}
+		@include breakpoint ($tabletish) {
+			img, .teaser-initiative {
+				float: left;
+			}	
+			.teaser-initiative {
+				padding-left: 1em;
+				max-width: 65%;
+			}
+			img {
+				max-width: 35%;
+			}
+			// .view__row {
+			// 	display: flex;
+			// 	flex: 35% 1;
+			// }
+		}
+		ul, li {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		li, li a {
+			display: inline-block;
+		}
+		li:first-child {
+			display: block;
+			margin-bottom: 0.5em;
+			@include breakpoint($max-page-width) {
+				display: inline-block;
+				margin-bottom: 0;
+			}
+		}
+	}
+ .button-link a {
+ 	position: relative;
+ 	top: -0.5em;
+ 	padding-right: 3.5em;
+ 	@include svg-background(arrow-circle-right-white);
+ 	background-repeat: no-repeat;
+ 	background-position: right 0.5em top 50%;
+ 	background-size: 2em 2em;
+ 	&:hover, &:active, &:focus {
+ 	 	@include svg-background(arrow-circle-right-grey-dark);	
+ 	}
+ }
+}

@@ -1,0 +1,29 @@
+.page-wrapper.l-constrain {
+	margin: 0;
+	padding: 0;
+}
+
+@include breakpoint($max-page-width) {
+	.page-wrapper {
+		margin-top: 24px;
+		margin-top: 1.5rem;
+		margin-bottom: 24px;
+		margin-bottom: 1.5rem;
+		box-shadow: 0 0 24px #000;
+		background-color: #fff;
+		&.l-constrain {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	.layout-container {
+		padding-top: 24px;
+		padding-top: 1.5rem;
+		padding-bottom: 24px;
+		padding-bottom: 1.5rem;
+		background: $color-blue-dark;
+	    @include svg-background(page-pattern);
+	    background-size: cover;
+	}
+}

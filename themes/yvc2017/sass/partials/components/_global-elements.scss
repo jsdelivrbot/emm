@@ -1,0 +1,104 @@
+// h1 {
+// 	.region-intro &, .region-hero & {
+// 		width: 100%;
+// 		text-align: center;
+// 	}
+// }
+
+.page--node-type-initiative {
+	.region-content {
+		h2 {
+			@include fontSize(28px);
+		}
+	}
+}
+
+.alt-text {
+	@include visually-hidden;
+}
+
+a.social-media-link {
+	display: inline-block;
+	width: 28px;
+	height: 27px;
+	// outline: rebeccapurple dotted 1px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center bottom;
+	margin: 0 0.25em;
+	&.instagram {
+		@include svg-background(instagram-grey);
+	}
+	&.facebook {
+		@include svg-background(facebook-grey);
+		margin-right: 0;
+	}
+	&.twitter {
+		@include svg-background(twitter-grey);
+	}
+}
+
+
+#block-sharethiswidget {
+	margin-bottom: 2em;
+	.block__title {
+		font-family: $base-font-family;
+		@include fontSize(16px);
+		margin-bottom: 0.5em;
+	}
+}
+.sharethis-wrapper > span {
+	display: inline-block;
+    width: 2.5em;
+    height: 2.5em;
+    // border: 2px solid $color-grey-dark;
+    border-radius: 100%;
+    background-color: $color-grey-dark;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    &:first-child {
+    	margin-right: 0.375em;
+    }
+    &:hover, &:focus, &:active {
+    	cursor: pointer;
+    	background-color: $color-orange;
+    }
+    &.st_twitter_custom {
+ 		@include svg-background(twitter-white);
+ 		background-size: 1.25em auto;
+    	&:hover, &:focus, &:active {
+  			// @include svg-background(twitter-grey);   		
+    	}	
+    }
+    &.st_facebook_custom {
+ 		@include svg-background(facebook-white);
+  		background-size: auto 1.25em ;
+    	&:hover, &:focus, &:active {
+  			// @include svg-background(facebook-grey);   		
+    	}	
+    }
+}
+
+.taxonomy-links {
+	margin-bottom: 2em;
+	 a {
+		@include fontSize(15px);
+		font-style: italic;
+		color: $color-grey-dark; 
+		text-decoration: underline;
+		&:hover, &:active, &:focus {
+			color: $color-orange;
+		}
+	}
+}
+
+// Fielded main images or video on content
+.block--main-page-content {
+	.field-name-field-feature-image, .video-embed-field-responsive-video {
+		margin-bottom: 1em;
+	}
+	.field__label {
+		font-weight: 700;
+	}
+}

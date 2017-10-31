@@ -1,0 +1,18 @@
+<?php
+
+use Drupal\Core\Template\Attribute;
+
+function toolbar_anti_flicker_page_attachments_alter(array &$page) {
+  if (!\Drupal::currentUser()->hasPermission('access toolbar')) {
+    return;
+  }
+  $page['#attached']['library'][] = 'toolbar_anti_flicker/toolbar-anti-flicker';
+}
+
+function toolbar_anti_flicker_preprocess_html(&$variables) {
+  if (!\Drupal::currentUser()->hasPermission('access toolbar')) {
+    return;
+  }
+
+  $variables['html_attributes']->addClass('toolbar-no-flickering');
+}

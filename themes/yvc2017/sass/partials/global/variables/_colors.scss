@@ -1,0 +1,38 @@
+// @file
+// Color variables
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_
+
+
+
+// Your Voice Counts 2017
+$color-grey-light: #dcdcdc;
+$color-grey-dark: #54565b;
+$color-grey-medium: #cacacb;
+$color-grey-light2: #a8a8aa;
+$color-orange: #dc6016;
+$color-blue: #00a8e2;
+$color-blue-dark: #00609c; 
+$color-navy: #201747;
+$color-green: #94d600;
+$color-magenta: #a2007d;
+$color-teal-light: #0099a9;
+
+
+$color-body: #fff;
+$color-gradient-dark: rgba(0, 0, 0, 0.1);
+$color-gradient-light: rgba(255, 255, 255, 0.1);
+$color-link: $color-blue-dark;
+$color-link-hover: $color-orange;
+$color-link-visited: $color-blue-dark;
+$color-selection-background: #dce4ef;
+$color-selection-foreground: #212121;
+$color-text-primary: $color-grey-dark;
+$color-text-secondary: $color-grey-dark;
+
+$color-debug-red: #FA8C99;
+$color-debug-orange: #FAB68C;
+$color-debug-yellow: #EDFA8C;
+$color-debug-green: #A6FA8C;
+$color-debug-blue: #8CF3FA;
+$color-debug-violet: #A777EB;
+

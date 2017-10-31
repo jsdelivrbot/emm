@@ -1,0 +1,12 @@
+// @file
+// Layout variables
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_
+
+@include breakpoint-set('to ems', true);
+$max-page-width: 1100px;
+$gutter-width: 0.625rem;
+$gutter-width-px: 10px;
+
+// Breakpoints
+$tabletish: 700px;
+$bp-hide-mobile-menu: $tabletish;

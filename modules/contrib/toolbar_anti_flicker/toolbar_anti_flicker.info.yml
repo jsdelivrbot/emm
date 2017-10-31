@@ -1,0 +1,13 @@
+name: Toolbar Anti-flicker
+type: module
+description: 'Removing annoying re-rendering flickering.'
+package: Toolbar
+# version: 8.x-1.0
+# core: 8.x
+hidden: false
+
+# Information added by Drupal.org packaging script on 2016-04-16
+version: '8.x-1.4'
+core: '8.x'
+project: 'toolbar_anti_flicker'
+datestamp: 1460820546

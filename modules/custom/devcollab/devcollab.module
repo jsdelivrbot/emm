@@ -1,0 +1,77 @@
+<?php
+
+use Drupal\views\ViewExecutable;
+use Drupal\Core\Block\BlockPluginInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function devcollab_views_pre_render(ViewExecutable $view) {
+  // On the initiatives page, exclude any nodes from
+  // "Show More Resources" (block_1) that already appear in the
+  // "Top 5 Resources" section or in the "Related Toolkits" block
+  // Get both fields from the node
+  $view_id = $view->id();
+
+  if ($view_id == 'resources_by_initiative') {
+    $exclude_ids = array();
+
+    if ($view->current_display == 'block_1') {
+      // Learning to fly a helicopter
+      // arg() is deprecated in D8
+      // https://www.drupal.org/node/2274705#comment-11375585
+      $node = \Drupal::routeMatch()->getParameter('node');
+
+      // Error checking in case block gets put on a non-node.
+      if (!empty($node)) {
+        $toolkit = $node->get('field_related_toolkits')->getValue();
+        $top_resources = $node->get('field_related_resources')->getValue();
+
+        // It think no error checking is needed because fields are empty arrays
+        // here even when not present on nodes - but doing it anyway --
+        // can't hurt!
+        if (!empty($toolkit)) {
+          // Get related toolkit ids
+          foreach ($toolkit as $k => $v) {
+            $exclude_ids[] = $v['target_id'];
+          }
+        }
+
+        if (!empty($top_resources)) {
+          // Get top resources ids
+          foreach ($top_resources as $k => $v) {
+            $exclude_ids[] = $v['target_id'];
+          }
+        }
+      }
+      // remove the excluded ids from the current view (after deduping)
+      foreach ($view->result as $k => $v) {
+        $exclude_ids = array_unique($exclude_ids);
+        if (in_array($v->nid, $exclude_ids)) {
+          unset($view->result[$k]);
+        }
+      }
+    }
+  }
+}
+
+function devcollab_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $route_name = $node = \Drupal::routeMatch()->getRouteName();
+  if ($form_id == 'views_exposed_form' && $route_name == 'view.search_resources.page_1') {
+    $form['search_api_fulltext']['#prefix'] = '<div class="block-search-form-mini keyword-advanced-search">';
+
+    $form['actions2']['submit2'] = $form['actions']['submit'];
+
+    if (!empty($form['actions']['reset'])) {
+      $form['actions2']['reset2'] = $form['actions']['reset'];
+      $form['actions2']['reset2']['#suffix'] = '</div>';
+    }
+    else {
+      $form['actions2']['submit2']['#suffix'] = '</div>';
+    }
+
+    $form['actions2']['#weight'] = 0;
+  }
+}

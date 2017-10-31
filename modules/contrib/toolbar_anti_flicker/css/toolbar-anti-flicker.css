@@ -1,0 +1,11 @@
+.toolbar-no-flickering {
+  padding-top: 79px;
+}
+.toolbar-no-flickering #toolbar-administration {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.toolbar-no-flickering #toolbar-bar {
+  height: 79px;
+}

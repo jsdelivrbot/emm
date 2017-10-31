@@ -1,0 +1,28 @@
+.no-mediaqueries {
+	.off-canvas-wrapper,#toggle-icon {
+		display: none;
+	}
+	.responsive-menu-block-wrapper {
+		display: block !important;
+	}
+	.layout-container {
+		background: $color-blue-dark;
+	}
+	.page-wrapper.l-constrain {
+		max-width: 800px;
+		margin: 0 auto;
+		background-color: #fff;
+	}
+} 
+
+.no-svg {
+	.site-logo > img {
+		display: none;
+	}
+	.site-logo {
+		display: block;
+		width: 140px;
+		height: 84px;
+		background: url('../images/bg/logo.png') no-repeat;
+	}
+}

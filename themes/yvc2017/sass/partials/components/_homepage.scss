@@ -1,0 +1,55 @@
+.front {
+	.region-content {
+		h1 {
+			@include visually-hidden;
+		}
+		ul, li {
+			list-style-type: none;
+		}
+		.block__title, .block__title > a, .view__header {
+			color: $color-grey-dark;
+		}
+		.block__title {
+			text-align: center;
+		}
+	}
+	.region-hero {
+		h2 {
+			color: #fff;
+			margin-bottom: 1em;
+		}
+		.l-constrain {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+		.block {
+			padding: 1em;
+
+			&:first-child:after {
+				content: " ";
+				display: block;
+				position: relative;
+				width: 100%;
+				padding: 0 $gutter-width;
+				height: 1px;
+				background-color: #fff;
+				top: 0.5em;
+			}
+			@include breakpoint($tabletish) {
+				&:first-child:after {
+					display: none;
+				}
+				float: left;
+				width: 50%;
+				padding: 1em 2em; 
+				border-right: 1px solid #fff;
+				&.search-form-hero {
+					border-left: 1px solid #fff;
+				}
+			}
+		}
+	}
+	.region-content .block {
+		margin-bottom: 2em;
+	}
+}

@@ -1,0 +1,5 @@
+services:
+  devcollab.route_subscriber:
+    class: Drupal\devcollab\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }

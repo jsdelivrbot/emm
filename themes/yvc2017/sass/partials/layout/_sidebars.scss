@@ -1,0 +1,40 @@
+// @file
+// Styles for the sidebar layout.
+
+$l-sidebars-bp: $tabletish;
+
+.l-sidebars {
+  @include breakpoint($l-sidebars-bp) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include breakpoint($tabletish) {
+    flex-wrap: nowrap;
+  }
+}
+
+[class^="l-sidebars__"] {
+  flex-grow: 1;
+}
+
+.l-sidebars__full {
+  flex-basis: 100%;
+}
+
+.l-sidebars__main {
+  flex-basis: 50%;
+}
+
+.l-sidebars__sidebar {
+  flex-basis: 22.3%; // Customized DevCollab for YVC
+}
+
+.l-sidebar-second {
+  @include breakpoint($tabletish) {
+    // padding-left: 1em;
+    padding-left: 7em;
+    .page--node-type-resource & {
+      padding-left: 3em;
+    }
+  }
+}

@@ -1,0 +1,122 @@
+.block-search-form-mini, .search-form-hero {
+	padding-top: 1em;
+	label {
+		@include visually-hidden;
+	}
+	.button {
+		background-color: #fff;
+		color: $color-grey-dark;
+		&:hover, &:focus, &:active {
+			background-color: $color-grey-dark;
+			color: #fff;
+		}
+	}
+	.form-item {
+		margin-bottom: 1em;
+	}
+	input[type="text"]:focus {
+		box-shadow: inset 0 0 5px $color-grey-dark;
+	}
+	.block__title {
+		background: none !important;
+	}
+	.block__content {
+		background: none !important;
+	}
+	a {
+		color: #fff;
+	}
+	.adv-search-link {
+		margin: 1em 0 1em 1em;
+	}
+	.adv-search-link.anchor-mobile {
+		display: none;
+	}
+}
+
+
+.block-search-form-mini
+// , .path-resources .form-item--id-search-api-fulltext 
+{
+	background-color: $color-blue !important;
+	@include svg-background(x-bg);
+	background-position: bottom;
+	background-size: cover;
+	background-repeat: no-repeat;	
+}
+.block-search-form-mini .block__content
+// , .path-resources .form-item--id-search-api-fulltext 
+{
+		padding: 0.5em 20px 1em 20px;	
+	}
+.block-search-form-mini {
+	.block__title {
+		@include fontSize(20px);
+	    padding: 0.25em 20px;
+	    margin-bottom: 0;
+	    color: #fff;
+	}
+	// .block__content {
+	// 	padding: 0.5em 20px 1em 20px;	
+	// }
+	.path-resources & {
+		.adv-search-link {
+			display: none;
+		}
+		.adv-search-link.anchor-mobile {
+			display: inline;
+		}
+	}
+	&.search-mobile {
+		@include breakpoint($tabletish) {
+			display: none;
+		}
+	}
+}
+
+
+// Older IE 
+.no-flexbox .block-search-form-mini.search-mobile {
+	display: block !important;
+}
+
+.block-collapsible {
+	cursor: pointer;
+	.block__content {
+		display: none;
+	}
+	.block__title {
+		position: relative;
+		display: inline-block;
+		@include fontSize(20px !important);
+		text-decoration: underline;
+		&:after { // Right arrow
+			display: inline-block;
+			position: absolute;
+			top: 0.25em;
+			margin-left: 0.5em;
+			content: " ";
+			width: 0; 
+		  	height: 0; 
+		  	border-top: 0.5em solid transparent;
+		  	border-bottom: 0.5em solid transparent;
+		  	border-left: 0.5em solid currentColor;
+		}
+	}
+	&.expanded {
+		.block__content {
+			display: block;
+		}
+		.block__title:after { // Down arrow
+			content: " ";
+			top: 0.5em;
+			width: 0; 
+			height: 0; 
+			border-left: 0.5em solid transparent;
+			border-right: 0.5em solid transparent;
+			border-top: 0.5em solid currentColor;
+		}
+	}
+}
+
+

@@ -1,0 +1,84 @@
+.block__content {
+	color: $color-grey-dark;
+}
+
+.paragraph {
+	margin-bottom: 1em;
+}
+
+.field {
+	& > .node {
+		margin-bottom: 2em;
+	}
+}
+
+// Generic interior pages 
+.page--node-type-page {
+	#main {
+		h1, h2, h3, h4, figure {
+			text-align: center;
+		}
+		figure {
+			line-height: 1;
+		}
+		figcaption {
+			text-align: left;
+			@include fontSize(12px);
+			font-weight: 700;
+			font-style: italic; 
+			padding: 0.25em 1em 1em 1em;
+			border: 1px solid $color-grey-light; 
+			border-top: none;
+		}
+		@include breakpoint($max-page-width) {
+			.align-left {
+				float: left;
+				margin-left: -120px;
+				margin-left: -7.5rem;
+				margin-top: 1em;
+				margin-right: 2em;
+				margin-bottom: 1em;
+				// width: 50%;
+				// height: auto;
+			}
+			.align-right {
+				float: right;
+				margin-right: -120px;
+				margin-right: -7.5rem;
+				margin-top: 1em;
+				margin-left: 2em;
+				margin-bottom: 1em;
+				// width: 50%;
+				// height: auto;
+			}
+		}
+		blockquote {
+			background-color: $color-blue;
+			color: #fff;
+			padding: 1em;
+			margin-left: 0;
+			margin-right: 0;
+			width: 100%;
+			text-align: center;
+			@include fontSize(28px);
+			font-family: $header-font-family;
+			line-height: 1.2;
+			p:before {
+				content: open-quote;
+			}
+			p:after {
+				content: close-quote;
+			}
+			@include breakpoint($max-page-width) {
+				width: auto;
+				padding: 1em 200px;
+				padding: 1em 12.5rem;
+		      	margin-left: -180px;
+		      	margin-left: -11.25rem;
+		      	margin-right: -180px;
+		      	margin-right: -11.25rem;
+				@include fontSize(32px);
+			}
+		}
+	}
+}

@@ -1,0 +1,42 @@
+// @file
+// Styles for buttons.
+
+.button {
+  @include button();
+  margin: 0 0 0.5em;
+
+  & + & {
+    margin-left: 0.5em; // LTR
+
+    @if $support-for-rtl {
+      [dir='rtl'] & {
+        margin-left: 0;
+        margin-right: 0.5em;
+      }
+    }
+  }
+}
+
+.button {
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: $color-orange;
+    &:hover, &:focus, &:active {
+      background-color: $color-grey-dark;
+    }
+  }
+
+.button-link a, a.button-link {
+  color: #fff;
+  font-weight: 700;
+  padding: 0.5em 1em;
+  border: 1px solid $color-grey-dark;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: $color-grey-dark;
+  &:hover, &:focus, &:active {
+    background-color: #fff;
+    color: $color-grey-dark;
+  }
+}

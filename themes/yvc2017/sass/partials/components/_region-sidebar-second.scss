@@ -1,0 +1,33 @@
+.region-sidebar-second {
+	.block {
+		margin-bottom: 1em;
+	}
+}
+// 	.block__content {
+// 		padding: 0.5em 20px 1em 20px;
+// 	}
+// 	.block__title {
+// 		@include fontSize(20px);
+// 		padding: 0.25em 20px;
+// 		color: #fff;
+// 	}
+// }
+
+
+.region-sidebar-second .block__title {
+	@extend %sidebar-block-title;
+}
+
+#block-views-block-related-to-initiative-block-1, .related-toolkits {
+	.block__title {
+		background-color: $color-blue-dark;
+	}
+	border-bottom: 0.5em $color-blue-dark solid;
+}
+#block-views-block-related-to-initiative-block-2, .related-collections {
+	.block__title {
+		background-color: $color-navy;
+	}
+	border-bottom: 0.5em $color-navy solid;
+}
+

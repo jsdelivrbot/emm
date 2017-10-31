@@ -1,0 +1,70 @@
+.header, .region-header {
+	width: 100%;
+}
+
+.region-header {
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	@include fontSize(16px);
+	padding-top: 3.5em;
+	padding-bottom: 3.5em;
+	background-color: #fff;
+	line-height: 1;
+	@include breakpoint($tabletish) {
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+}
+
+#block-horizontalmenu {
+	margin-bottom: 1em;
+	@include breakpoint($tabletish) {
+		margin-left: -1em;
+	}
+  	@include breakpoint($max-page-width) {
+	    margin: 0 1em 0 auto;
+	}
+}
+
+#block-yvc2017-searchresourcecenter a {
+	display: inline-block;
+	padding: 0.75em 1.25em;
+	margin: 0 1em;
+	text-transform: uppercase;
+	background-color: $color-orange;
+	color: #fff;
+	text-decoration: none;
+	&:hover, &:focus, &:active {
+		text-decoration: underline;
+	}
+	@include breakpoint($tabletish) {
+		margin: 0;
+	}
+}
+.site-logo {
+	margin-bottom: 1em;
+	// @include breakpoint($tabletish-min-max) {
+	// 	flex-basis: 100%;
+	// }
+	@include breakpoint($max-page-width) {
+		margin-bottom: 0; 
+	}
+}
+.no-flexbox {
+	.region-header {
+		float: left;
+	}
+	.region-navigation  {
+		  @include breakpoint($tabletish) {
+		    float: right;
+		}
+	}
+}
+
+.block--search-resource-center {
+	p {
+		margin: 0;
+	}
+}

@@ -1,0 +1,20 @@
+diff --git a/download_count.views.inc b/download_count.views.inc
+index 7bbf324..625316e 100644
+--- a/download_count.views.inc
++++ b/download_count.views.inc
+@@ -48,6 +48,7 @@ function download_count_views_data() {
+     'relationship' => array(
+       'base' => 'file_managed',
+       'base field' => 'fid',
++      'id' => 'standard',
+       'label' => t('File'),
+     ),
+   );
+@@ -58,6 +59,7 @@ function download_count_views_data() {
+     'relationship' => array(
+       'base' => 'users_field_data',
+       'base field' => 'uid',
++      'id' => 'standard',
+       'label' => t('User'),
+     ),
+   );

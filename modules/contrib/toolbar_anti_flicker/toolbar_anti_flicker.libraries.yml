@@ -1,0 +1,9 @@
+toolbar-anti-flicker:
+  version: 8.x-1.0
+  js:
+    js/toolbar-anti-flicker.js: {}
+  dependencies:
+    - core/jquery
+  css:
+    theme:
+      css/toolbar-anti-flicker.css: {}

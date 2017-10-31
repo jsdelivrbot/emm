@@ -1,0 +1,236 @@
+.footer {
+	margin-top: 2em;
+	background-color: $color-grey-dark;
+	border-top: solid #000 6px;
+	.l-constrain {
+		padding-top: 2em;
+		padding-bottom: 2em;
+		color: #fff;
+	}
+}
+
+.footer {
+	color: #fff;
+	a {
+		color: #fff;
+		text-decoration: none;
+		&:hover, &:focus {
+			color: currentcolor;
+			text-decoration: underline;
+		}
+	}
+	h2 {
+		@include fontSize(16px);
+		font-family: $base-font-family;
+		font-weight: normal;
+	}
+}
+
+.region-footer > .l-constrain {
+	display: flex;
+	flex-wrap: wrap;
+	.block {
+		padding-right: 3em;
+		margin-bottom: 2em;
+	}
+	// @include breakpoint($tabletish)	{
+		.block--site-developed-with-support-and-funding-from {
+			flex: 1 0 40%;
+		}
+		nav, .block--footer-navigation {
+			flex: 1 0 30%;
+		}
+	// }
+}
+
+@include breakpoint($tabletish) {
+	.region-footer {
+		.block, nav{
+			border-right: 1px #fff solid;
+			padding-right: 2em;
+			padding-left: 2em;
+			margin-bottom: 0;
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				border: none;
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+.block--site-developed-with-support-and-funding-from {
+	p, h2, a {
+		color: $color-green;
+	}
+	p {
+		@include fontSize(12px);
+		clear: both;
+	}
+	ul, li {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	// li {
+	// 	margin: 0 0 1em 1em;
+	// 	&:first-child {
+	// 		margin-left: 0;
+	// 	}
+	// }
+}
+.footer-logo {
+	display: inline-block;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 68px;
+	margin: 0 0 1em 1em;
+	&:first-child {
+		margin-left: 0;
+	}
+	&.emm-logo {
+		@include svg-background(emm-logo-white);
+		width: 165px;
+	}
+	&.calmhsa-logo {
+		@include svg-background(calmhsa-logo);
+		width: 71px;
+	}
+	&.prop63-logo {
+		@include svg-background(prop63-logo);
+		width: 69px;
+	}
+	@include breakpoint($tabletish) {
+		float: left;
+	}
+}
+
+.nav--main-menu-in-footer {
+	font-family: $header-font-family;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	justify-content: center;
+	li {
+		padding: 1em 0;
+		&:first-child {
+			padding-top: 0;
+		}
+	}
+	a {
+		&:hover, &:focus, &:active {
+			text-decoration: none;
+			color: $color-orange;
+		}
+		&.is-active {
+			text-decoration: underline;
+		}
+	}
+	li:last-child a {
+		color: $color-orange;
+		&:hover, &:focus, &:active {
+			color: #fff;
+		}
+	}
+}
+
+
+
+.region-footer-bottom {
+	padding: 1em 0;
+	background-color: #000;
+	text-align: center;
+	* {
+		color: #fff;
+	}
+	.nav, .nav li {
+		display: inline-block;
+		margin: 0;
+	}
+	.nav li {
+		padding-right: 1em;
+		&:after {
+			content: "|";
+			display: inline;
+			margin-left: 1em;
+		}
+		&:last-child:after {
+			display: none;
+		}
+	}
+	a {
+		text-decoration: none;
+		&:hover, &:focus, a:active {
+			color: #fff;
+			text-decoration: underline;
+		}
+	}
+}
+#block-stayconnected {
+	order: 3;
+	@include breakpoint($tabletish) {
+		order: inherit;
+	}
+}
+
+#block-stayconnected .block__content {
+	ul, li {
+		list-style-type: none;
+		padding: 0;
+		margin:0;
+	}
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		margin-bottom: 1em;
+		// justify-content: space-between;
+		// width: 40%;
+		// @include breakpoint($tabletish) {
+		// 	width: 100%;
+		// }
+	}
+	li {
+		margin-left: 1em;
+		&:first-child {
+			margin: 0; 
+		}
+	}
+}
+.region-footer {
+	.nav-icon {
+		display: inline-block;
+		height: 2em;
+		width: 2em;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center bottom; 
+		&.icon-twitter {
+			@include svg-background(twitter-white);
+			&:hover, &:focus, &:active {
+				@include svg-background(twitter-orange);			
+			}
+		}
+		&.icon-facebook {
+			@include svg-background(facebook-white);
+			&:hover, &:focus, &:active {
+				@include svg-background(facebook-orange);			
+			}
+		}
+		&.icon-instagram {
+			@include svg-background(instagram-white);
+			&:hover, &:focus, &:active {
+				@include svg-background(instagram-orange);			
+			}
+		}
+	}
+	.link-newsletter-signup {
+		a:hover, a:focus, a:active {
+			color: $color-orange;
+			text-decoration: none;
+		} 
+	}
+}
+

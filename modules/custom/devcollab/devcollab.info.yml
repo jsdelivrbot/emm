@@ -1,0 +1,6 @@
+name: Devcollab
+description: Assorted small customizations by DevCollaborative for the EMM Resource Center.
+package: DevCollaborative
+type: module
+version: 1.0
+core: 8.x

@@ -1,0 +1,55 @@
+// @file
+// Styles for the mobile menu.
+// MMenu off canvas menu module
+.mm-menu.mm-theme-dark {
+	background-color: $color-grey-dark;
+	@include svg-background(stripes);
+}
+#toggle-icon {
+  background-color: $color-orange;
+  .label {
+    @include visually-hidden;
+  }
+}
+
+.mm-panel.mm-hasnavbar .mm-navbar {
+	display: none;
+}
+
+.mm-menu.mm-theme-dark .mm-listview, .mm-menu.mm-theme-dark .mm-listview > li, .mm-listview>li:not(.mm-divider):after {
+	border: none;
+	background: none;
+}
+.mm-right.mm-opening .mm-menu~.mm-slideout {
+	box-shadow: 4px 0 21px -1px rgba(0,0,0,0.3);
+}
+
+.mm-listview > li > a {
+	font-family: $header-font-family;
+	@include fontSize(20px);
+	line-height: 1;
+	padding: 1em 2em; 
+	color: #fff;
+}
+.mm-listview > li:first-child > a {
+	display: block;
+	width: 200px;
+	width: 12.5rem;
+	height: 82px;
+	height: 5.125rem;
+	max-width: 100%;
+	max-height: auto;
+	@include svg-background(emm-logo-white);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	color: transparent;
+	font-size: 1px;
+	margin-left: 40px;
+	margin-left: 2.5rem;
+	margin-bottom: 20px;
+	margin-bottom: 1.5rem;
+	background-size: cover;
+	@include breakpoint($tabletish) {
+		display: none;
+	}
+}

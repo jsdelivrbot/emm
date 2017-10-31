@@ -1,0 +1,292 @@
+.tile-list-simple .col-content {  // Using "Suicide prevention" tile as default - category-67
+	background-image: url("../images/bg/collection-suicide-prevention.png");
+	background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-suicide-prevention.svg");
+	background-size: cover, cover, 33%;
+	background-position: center, bottom -20px left, right 0 bottom -5px;
+	background-repeat: no-repeat;
+}
+.tile-list-simple .col-content {
+// Asian Pacific Heritage	48
+	&.category-48 {
+		background-image: url("../images/bg/collection-asian-pacific.png");
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-asian-pacific.svg");
+	}
+	// Back to School 	49
+	&.category-49 {
+		background-image: url("../images/bg/collection-back-to-school.png"); 
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-back-to-school.svg");
+	}
+	// Black History Month	50
+	&.category-50 {
+		background-image: url("../images/bg/collection-black-history-month.png");
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-black-history-month.svg");
+	}
+	// Children	51
+	&.category-51 {
+		background-image: url("../images/bg/collection-children.png");
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-children.svg");
+	}
+	// Conference Training	52
+	&.category-52 {
+		background-image: url("../images/bg/collection-conference-training.png"); 
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-conference-training.svg");
+	}
+	// Continuing Education	53
+	&.category-53 {
+		background-image: url("../images/bg/collection-continuing-education.png");
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-continuing-education.svg");
+	}
+	// Faith Based	71
+	&.category-71 {
+		background-image: url("../images/bg/collection-faith-based.png"); 
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-faith-based.svg");
+	}
+	// Higher Education 	54
+	&.category-54 {
+		background-image: url("../images/bg/collection-higher-education.png");
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-higher-education.svg");
+	}
+	// Hispanic Heritage	72
+	&.category-72 {
+		background-image: url("../images/bg/collection-hispanic-heritage.png"); 
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-hispanic-heritage.svg");
+	}
+	// K-12 schools	56
+	&.category-56 {
+		background-image: url("../images/bg/collection-k-12-schools.png");
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-k-12-schools.svg");
+	}
+	// LGBTQ	55
+	&.category-55 {
+		background-image: url("../images/bg/collection-lgbtq.png");
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-lgbtq.svg");
+	}
+	// Lunar New Year	57
+	&.category-57 {
+		background-image: url("../images/bg/collection-lunar-new-year.png");
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-lunar-new-year.svg");
+	}
+	// Man	58
+	&.category-58 {
+		background-image: url("../images/bg/collection-man.png");
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-man.svg");
+	}
+	// Mental Health Month	59
+	&.category-59 {
+		background-image: url("../images/bg/collection-mental-health-month.png");
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-mental-health-month.svg");
+	}
+	// Mental Health Providers	60
+	&.category-60 {
+		background-image: url("../images/bg/collection-mental-health-providers.png");
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-mental-health-providers.svg");
+	}
+	// Minority Mental Health	61
+	&.category-61 {
+		background-image: url("../images/bg/collection-minority-mental-health.png");
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-minority-mental-health.svg");
+	}
+	// Native American Heritage	62
+	&.category-62 {
+		background-image: url("../images/bg/collection-native-american.png");
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-native-american.svg");
+	}
+	// Non Binary People	63
+	&.category-63 {
+		background-image: url("../images/bg/collection-non-binary.png");
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-non-binary.svg");
+	}
+	// Older adults	64
+	&.category-64 {
+		background-image: url("../images/bg/collection-older-adults.png");
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-older-adults.svg");
+	}
+	// Primary Care Providers	65
+	&.category-65 {
+		background-image: url("../images/bg/collection-primary-care-providers.png"); 
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-primary-care-providers.svg");
+	}
+	// Ramadan	66
+	&.category-66 {
+		background-image: url("../images/bg/collection-ramadan.png");
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-ramadan.svg");
+	}
+	// // Suicide Prevention	67
+	// &.category-67 {
+	// 	// background-image: PNG FALLBACK 
+	// 	// background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-suicide-pevention.svg");
+	// 	// THIS IS ALREADY THE DEFAULT TILE STYLE
+	// }
+
+	// Suicide Prevention Week	74
+	&.category-74 {
+		background-image: url("../images/bg/collection-suicide-prevention-week.png");
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-suicide-prevention-week.svg");
+	}
+	// Veterans 67
+	&.category-67 {
+		background-image: url("../images/bg/collection-veterans.png");
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-veterans.svg");
+	}
+	// Woman	68
+	&.category-68 {
+		background-image: url("../images/bg/collection-woman.png");
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-woman.svg");
+	}
+	// Women's History	69
+	&.category-69 {
+		background-image: url("../images/bg/collection-womens-history.png");
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-womens-history.svg");
+	}
+	// Workplace - Employers & Workplace 86
+	&.category-86 {
+		background-image: url("../images/bg/collection-workplace.png");
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-workplace.svg");
+	}
+	// Young Adults 	70
+	&.category-70 {
+		background-image: url("../images/bg/collection-young-adults.png");
+		background-image: linear-gradient(transparent, transparent), url("../images/bg/diagonal.svg"), url("../images/bg/collection-young-adults.svg");
+	}
+}
+// Individual collection pages - hero icons 
+.hero-icon {
+	position: relative;
+	z-index: 0;
+	h1, .content-type-label-wrapper {
+		position: relative;
+		z-index: 2;
+	}
+	h1, .category-icon-51 {
+		display: inline-block;
+
+	}
+	h1 {
+		width: inherit !important;
+	}
+}
+.hero-category-icon {
+	position: absolute;
+	width: 7em;
+	height: 7em;
+	bottom: -0.5em;
+	left: 0;
+	background-size: contain;
+ 	// outline: 1px dotted green !important;
+	background-repeat: no-repeat;
+	opacity: 0.5;
+	z-index: 1;	
+	// Asian Pacific Heritage	48
+	&.category-icon-48 {
+		@include svg-background(collection-asian-pacific);
+	}
+	// Back to School 	49
+	&.category-icon-49 {
+		@include svg-background(collection-back-to-school);
+	}
+	// Black History Month	50
+	&.category-icon-50 {
+		@include svg-background(collection-black-history-month);
+	}
+	// Children	51
+	&.category-icon-51 {
+		@include svg-background(collection-children);
+	}
+
+	// Conference Training	52
+	&.category-icon-52 {
+		@include svg-background(collection-conference-training);
+	}
+	// Continuing Education	53
+	&.category-icon-53 {
+		@include svg-background(collection-continuing-education);
+	}
+	// Faith Based	71
+	&.category-icon-71 {
+		@include svg-background(collection-faith-based);
+	}
+	// Higher Education 	54
+	&.category-icon-54 {
+		@include svg-background(collection-higher-education);
+	}
+	// Hispanic Heritage	72
+	&.category-icon-72 {
+		@include svg-background(collection-hispanic-heritage);
+	}
+	// K-12 schools	56
+	&.category-icon-56 {
+		@include svg-background(collection-k-12-schools);
+	}
+	// LGBTQ	55
+	&.category-icon-55 {
+		@include svg-background(collection-lgbtq);
+	}
+	// Lunar New Year	57
+	&.category-icon-57 {
+		@include svg-background(collection-lunar-new-year);
+	}
+	// Man	58
+	&.category-icon-58 {
+		@include svg-background(collection-man);
+	}
+	// Mental Health Month	59
+	&.category-icon-59 {
+		@include svg-background(collection-mental-health-month);
+	}
+	// Mental Health Providers	60
+	&.category-icon-60 {
+		@include svg-background(collection-mental-health-providers);
+	}
+	// Minority Mental Health	61
+	&.category-icon-61 {
+		@include svg-background(collection-minority-mental-health);
+	}
+	// Native American Heritage	62
+	&.category-icon-62 {
+		@include svg-background(collection-native-american);
+	}
+	// Non Binary People	63
+	&.category-icon-63 {
+		@include svg-background(collection-non-binary);
+	}
+	// Older adults	64
+	&.category-icon-64 {
+		@include svg-background(collection-older-adults);
+	}
+	// Primary Care Providers	65
+	&.category-icon-65 {
+		@include svg-background(collection-primary-care-providers);
+	}
+	// Ramadan	66
+	&.category-icon-66 {
+		@include svg-background(collection-ramadan);
+	}
+	// Suicide Prevention	67
+	&.category-icon-67 {
+		@include svg-background(collection-suicide-prevention);
+	}
+	// Suicide Prevention Week	74
+	&.category-icon-74 {
+		@include svg-background(collection-suicide-prevention-week);
+	}
+	// Veterans 
+	&.category-icon-67 {
+		@include svg-background(collection-veterans);
+	}	
+	// Woman	68
+	&.category-icon-68 {
+		@include svg-background(collection-woman);
+	}
+	// Women's History	69
+	&.category-icon-69 {
+		@include svg-background(collection-womens-history);
+	}
+	// Workplace - Employers & Workplace	86
+	&.category-icon-86 {
+		@include svg-background(collection-workplace);
+	}
+	// Young Adults 	70
+	&.category-icon-70 {
+		@include svg-background(collection-young-adults);
+	}
+}

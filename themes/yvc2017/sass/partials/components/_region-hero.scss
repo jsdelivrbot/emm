@@ -1,0 +1,209 @@
+.region-hero {
+	margin-bottom: 1em;
+	background-color: $color-blue;
+	@include svg-background(stripes);
+	h1 {
+		text-align: center;
+	}
+	.content-id-9 & { // Initiatives landing page - special EMM hero
+		background-color: $color-green;
+		@include svg-background(x-bg);
+		background-position: bottom -70px right -160px;
+		background-size: cover;	
+		background-repeat: no-repeat;
+		figure, .hero-teaser-text {
+			float: left;
+		}
+		figure, figure a {
+			margin-bottom: 0;
+			line-height: 0;
+		}
+		figure {
+			margin-right: 1em;
+			margin-top: 0.5em;
+			@include breakpoint($tabletish) {
+				margin-top: 0;
+			}
+		}
+		.l-constrain {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+		h2 {
+			text-align: left !important;
+		}
+		img {
+			max-height: 230px;
+		}
+		.view__content > div {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			@include breakpoint($tabletish) {
+				flex-wrap: nowrap;
+			}
+		}
+		.hero-teaser-text, .hero-teaser-text a {
+			color: $color-grey-dark;
+		}
+		.hero-teaser-text h2 {
+			font-family: $base-font-family;
+			margin-bottom: 0;
+			margin-top: 1em;
+			@include breakpoint($tabletish) {
+				margin-top: 0;
+			}
+		}
+		.more-link {
+			font-style: italic;
+			@include fontSize(18px);
+		}
+	}
+	.l-constrain {
+		@include fontSize(20px);
+		padding-top: 2.5em;
+		padding-bottom: 4em;
+		h2 {
+			@include fontSize(28px);
+		}
+		a, .block__content {
+			color: #fff;
+		}
+	}
+	.path-collections &, .page--node-type-initiative & {
+		.l-constrain {
+			padding-top: 1em;
+			padding-bottom: 1em;
+		}
+	}
+	.path-collections &, .page--node-type-initiative &, .page--node-type-collection & {
+		margin-bottom: 0;
+		text-align: center;
+		h1 {
+			margin-bottom: 0;
+		}
+	}
+	.path-collections &, .page--node-type-collection & {
+		background-color: $color-magenta;
+	}
+	.page--node-type-initiative & {
+		background-color: $color-teal-light;
+	}
+	.page--node-type-resource & {
+		text-align: center;
+		background-color: $color-grey-light;
+		.l-constrain {
+			padding-top: 1em;
+			padding-bottom: 0.5em;
+		}
+		h1 {
+			@include fontSize(44px);
+			margin: 0.5em 0;
+			line-height: 1;
+			color: $color-grey-dark;
+		}
+		.content-type-label {
+			background-color: #201747; 
+		}
+	}
+	.page--node-type-collection & {
+		.l-constrain {
+			padding: 0 !important;
+		}
+		// h1 {
+		// 	@include fontSize(44px);
+		// }
+		.view__row {
+			padding: 1em 0;
+			overflow: hidden;
+			@include breakpoint($tabletish) {
+				margin-right: 112px;
+				margin-right: 7rem;
+				margin-left: 112px;
+				margin-left: 7rem;
+			}
+		}
+	}
+}
+
+// Initiatives 
+.content-type-label {
+	display: inline-block;
+	@include fontSize(16px);
+	line-height: 1;
+	padding: 0.25em 2em;
+	margin: 0 0 0.5em 0;
+	font-family: $header-font-family;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: $color-grey-dark;
+}
+
+// Homepage Hero 
+.region-hero .views-field-field-featured-item {
+	position: relative; 
+	max-width: 320px; //TEMPORARY 
+	p, h3 {
+		@include fontSize(16px);
+	}
+	h3 {
+		font-family: $base-font-family;
+	}
+	a {
+		text-decoration: none;
+	}
+	.field-name-field-teaser-image, .views-field-field-featured-item {
+		background-color: #000;
+		line-height: 0;
+		img {
+			opacity: 0.7;
+		}
+		a {
+			line-height: 0;
+		}
+	}
+	.field-name-field-teaser-image a {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	.featured-teaser-text {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 1.75em;
+		.field-name-dynamic-token-fieldnode-explore-link {
+			@include fontSize(16px);
+			font-weight: 700;
+			text-decoration: underline;
+			&:after {
+				content: " » ";
+			}
+		}
+		// @include breakpoint($very-small-screens-only) {
+		// 	// p, .field-name-dynamic-token-fieldnode-explore-link {
+		// 	// 	display: none;
+		// 	// }
+		// 	line-height: 1;
+		// }
+	}
+	// @include breakpoint($very-small-screens-only) {
+	// 	.featured-teaser-text {
+	// 		line-height: 1.1;
+	// 	}
+	// 	h3, p {
+	// 		margin-bottom: 0;
+	// 	}
+	// 	// .field-name-dynamic-token-fieldnode-explore-link {
+	// 	// 	@include fontSize(16px);
+	// 	// }
+	// }
+}
+
+.region-hero .views-field-field-featured-item {
+	&:hover, &:focus, &:active {
+			img {
+				opacity: 0.5;
+			}
+		}
+}
