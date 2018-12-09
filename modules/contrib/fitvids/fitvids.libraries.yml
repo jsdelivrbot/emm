@@ -4,7 +4,7 @@ fitvids:
     # js/jquery.fitvids.js: {}
     /libraries/fitvids/jquery.fitvids.js: {}
     # https://cdn.jsdelivr.net/fitvids/1.1.0/jquery.fitvids.js: { type: external }
-    # https://cdn.rawgit.com/davatron5000/FitVids.js/master/jquery.fitvids.js: { type: external }
+    # https://cdn.jsdelivr.net/gh/davatron5000/FitVids.js@master/jquery.fitvids.js: { type: external }
     
 init:
   version: VERSION
